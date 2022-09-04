@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.twilio.sdk:twilio:9.0.0-rc.3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/twilio/sdk/twilio/9.0.0-rc.3/twilio-9.0.0-rc.3.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/twilio/sdk/twilio/9.0.0-rc.3/twilio-9.0.0-rc.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/twilio/sdk/twilio/9.0.0-rc.3/twilio-9.0.0-rc.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

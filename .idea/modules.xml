@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mini-crm/mini-crm.iml" filepath="$PROJECT_DIR$/mini-crm/mini-crm.iml" />
-      <module fileurl="file://$PROJECT_DIR$/my-client-app/my-client-app.iml" filepath="$PROJECT_DIR$/my-client-app/my-client-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crm-client/crm-client.iml" filepath="$PROJECT_DIR$/crm-client/crm-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crm/mini-crm.iml" filepath="$PROJECT_DIR$/crm/mini-crm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sms-sender/sms.iml" filepath="$PROJECT_DIR$/sms-sender/sms.iml" />
     </modules>
   </component>
 </project>

@@ -4,6 +4,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/mini-crm/pom.xml" />
+        <option value="$PROJECT_DIR$/crm/pom.xml" />
+        <option value="$PROJECT_DIR$/sms-sender/pom.xml" />
       </list>
     </option>
   </component>

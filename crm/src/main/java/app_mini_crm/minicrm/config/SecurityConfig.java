@@ -1,6 +1,5 @@
 package app_mini_crm.minicrm.config;
 
-import app_mini_crm.minicrm.entity.User;
 import app_mini_crm.minicrm.security.JwtErrors;
 import app_mini_crm.minicrm.security.JwtTokenFilter;
 import app_mini_crm.minicrm.service.AuthService;
@@ -10,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.authentication.configurers.userdetails.DaoAuthenticationConfigurer;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -82,7 +80,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/api/auth/register", "/api/auth/login", "/api/course/**", "/api/attachment/**", "/api/group/**", "/api/profile/**", "/api/languages/**", "/api/auth/**", "/api/lid/**")
+                .antMatchers("/api/auth/register", "/api/auth/login", "/api/course/**", "/api/attachment/**", "/api/group/**", "/api/profile/**", "/api/languages/**", "/api/auth/**", "/api/lid/**", "/api/sms/**", "/api/color/**", "/api/pupil/**", "/api/history/**", "/api/darsVaqtlari/**")
                 .permitAll()
                 .antMatchers(HttpMethod.GET, "/api/language")
                 .permitAll()

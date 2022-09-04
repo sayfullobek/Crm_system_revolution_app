@@ -49,4 +49,13 @@ public class Pupil extends AbsEntity {
         this.course = course;
         this.fromWhere = fromWhere;
     }
+
+    public Pupil(String name, String surname, String phoneNumber, String lidStatus, Group group, String fromWhere) {
+        this.name = name;
+        this.surname = surname;
+        this.phoneNumber = phoneNumber;
+        this.lidStatus = lidStatus;
+        this.group = group;
+        this.fromWhere = fromWhere;
+    }
 }

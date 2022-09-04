@@ -32,6 +32,13 @@ public class AuthController {
     @Autowired
     JwtTokenProvider jwtTokenProvider;
 
+//    private final SmsSender smsSender;
+//
+//    @Autowired
+//    public AuthController(@Qualifier("twilio") TwilioSmsSender twilioSmsSender) {
+//      this.smsSender = twilioSmsSender;
+//    }
+
 
     @PostMapping("/register")
     public HttpEntity<?> register(@RequestBody ReqRegister reqRegister) {
@@ -58,6 +65,8 @@ public class AuthController {
     }
 
     public GetLogin getMal(User user, ResToken resToken) {
+//        SmsRequest smsRequest = new SmsRequest("+998990763246", user.getFirstName() + " " + user.getLastName() + " sizning web saytingizga kirdi");
+//        smsSender.sendSms(smsRequest);
         return new GetLogin(user, resToken);
     }
 
@@ -74,13 +83,16 @@ public class AuthController {
 
     @DeleteMapping("/{id}")
     public HttpEntity<?> deleteUser(@PathVariable UUID id) {
+//        User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("getUser"));
+//        SmsRequest smsRequest = new SmsRequest("+998990763246", user.getFirstName() + " " + user.getLastName() + " ushbu userni o'chirdingiz");
+//        smsSender.sendSms(smsRequest);
         return ResponseEntity.ok(authService.deleteUser(id));
     }
 
 
     @PutMapping("/edit/{id}")
-    public HttpEntity<?> editUser(@PathVariable UUID id, @RequestBody ReqRegister reqRegister){
-        ApiResponse response = authService.editUser(id,reqRegister);
+    public HttpEntity<?> editUser(@PathVariable UUID id, @RequestBody ReqRegister reqRegister) {
+        ApiResponse response = authService.editUser(id, reqRegister);
         return ResponseEntity.status(response.isSuccess() ? HttpStatus.CREATED : HttpStatus.CONFLICT)
                 .body(response.isSuccess() ? new ApiResponse(response.getMessage(), true, generateToken(reqRegister.getPhoneNumber())) : response);
     }

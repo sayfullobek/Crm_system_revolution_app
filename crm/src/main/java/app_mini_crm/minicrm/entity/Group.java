@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import java.io.File;
 
 @EqualsAndHashCode(callSuper = true)
@@ -19,6 +21,6 @@ public class Group extends AbsEntity {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
-    private String file;
+    @ManyToOne(optional = false)
+    private Course course;
 }

@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
-public class Course extends  AbsNameEntity {
+public class Course extends AbsNameEntity {
 }
 
 

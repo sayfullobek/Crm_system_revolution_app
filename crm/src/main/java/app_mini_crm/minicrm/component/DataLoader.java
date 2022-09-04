@@ -1,8 +1,10 @@
 package app_mini_crm.minicrm.component;
 
+import app_mini_crm.minicrm.entity.Color;
 import app_mini_crm.minicrm.entity.Role;
 import app_mini_crm.minicrm.entity.enums.RoleName;
 import app_mini_crm.minicrm.entity.User;
+import app_mini_crm.minicrm.repository.ColorRepository;
 import app_mini_crm.minicrm.repository.RoleRepository;
 import app_mini_crm.minicrm.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,9 @@ public class DataLoader implements CommandLineRunner {
     RoleRepository roleRepository;
 
     @Autowired
+    ColorRepository colorRepository;
+
+    @Autowired
     PasswordEncoder passwordEncoder;
 
     @Value("${spring.sql.init.mode}")
@@ -34,6 +39,12 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         if (initMode.equals("never")) {
+            colorRepository.save(
+                    new Color(
+                            1,
+                            "white"
+                    )
+            );
             roleRepository.save(
                     new Role(
                             RoleName.ADMIN

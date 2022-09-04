@@ -26,7 +26,7 @@ public class ReqLid {
 
     private String surname;
 
-//    @Pattern(regexp = "^[+][9][9][8][0-9]{9}$", message = "Phone number must be 13 digits.")
+    @Pattern(regexp = "^[+][9][9][8][0-9]{9}$", message = "Phone number must be 13 digits.")
     private String phoneNumber;
 
     private String lidStatus;
